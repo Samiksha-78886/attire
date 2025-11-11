@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attire</title>
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+<div class="navbar">
+   <div class="nav-logo border">
+     <div class="logo"></div>
+</div>
+
+  
+
+  <div class="nav-search">
+        <select class="search-select">
+          <option>All</option>
+          <option>menfresh</option>
+          <script>
+  const selectBox = document.querySelector('.search-select');
+
+  selectBox.addEventListener('change', function() {
+    const value = this.value.toLowerCase();
+
+    if (value === 'all') {
+      // "All" पर क्लिक करने पर redirect होगा
+      window.location.href = 'men wearing.html';  // 👈 यहां वो पेज डाल जो "Shop Now" खोलता है
+    } 
+    else if (value === 'menfresh') {
+      // "menfresh" पर redirect
+      window.location.href = 'men wearing.html';  // चाहो तो अलग पेज रख सकते हो
+    }
+  });
+</script>
+        </select>
+        <input placeholder="Search Attires" class="search-input">
+  </div>
+  
+  <div>
+    
+    <!-- Account holder text -->
+<p id="accountHolder" style="cursor: pointer; color: pink; font-size: small;">Account holder</p>
+
+<!-- Hidden Form (Popup Modal) -->
+<div id="accountForm" style="display:none; position: fixed; top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); background: rgb(97, 34, 34); padding: 20px; 
+  border-radius: 10px; box-shadow: 0 0 10px rgba(219, 82, 82, 0.3); width: 500px;">
+
+  <h2>Your Account Details
+ </h2>
+ <svg  viewBox="0 0 640 640" width="120px" height="120px"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M463 448.2C440.9 409.8 399.4 384 352 384L288 384C240.6 384 199.1 409.8 177 448.2C212.2 487.4 263.2 512 320 512C376.8 512 427.8 487.3 463 448.2zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 336C359.8 336 392 303.8 392 264C392 224.2 359.8 192 320 192C280.2 192 248 224.2 248 264C248 303.8 280.2 336 320 336z"/></svg>
+  <form> 
+    
+    <label>NAME:</label><br>
+    <input type="text" id="name" ><br><br>
+
+    <label>USERNAME:</label><br>
+    <input type="text" id="username" ><br><br>
+
+    <label>Email:</label><br>
+    <input type="text" id="email" ><br><br>
+
+    <label>REGION:</label><br>
+    <input type="text" id="region" ><br><br>
+
+    <label>PINCODE:</label><br>
+    <input type="text" id="pincode" ><br><br>
+
+    <label>Address:</label><br>
+    <textarea id="address" rows="3" ></textarea><br><br>
+
+    <button type="button" onclick="closeForm()">Close</button>
+    <button type="button" onclick="saveForm()">Save</button>
+  </form>
+</div>
+  </div>
+
+  
+ 
+</header>
+<div class="hero-section">
+  <div class="hero-msg">
+    You are on attire.com. Shop, Happily to follow newly Trends with one to one Outfits. 
+  </div>
+  </div>
+  <a href="men wearing.html">
+<div class="shop-section">
+  <div class="box1 box">
+    <div class="box-content">
+    <h2>MEN WEARING</h2>
+    <div class="box-img" style="background-image: url('image/abc.jpeg');">
+      </div>
+      <p>Shop now →</p>
+    </div>
+  </a>
+  </div>
+  
+  
+<footer>
+  
+  </div>
+  <div class="foot-panel2">
+    <div class="logo1"></div>
+  </div>
+</footer>
+<script>
+  // फॉर्म खोलना
+  document.getElementById("accountHolder").addEventListener("click", function() {
+    document.getElementById("accountForm").style.display = "block";
+
+    // अगर पहले से डेटा सेव है तो उसे दिखाओ
+    const savedData = JSON.parse(localStorage.getItem("userData"));
+    if (savedData) {
+      document.getElementById("username").value = savedData.username;
+      document.getElementById("email").value = savedData.email;
+      document.getElementById("address").value = savedData.address;
+    }
+  });
+
+  // फॉर्म बंद करना
+  function closeForm() {
+    document.getElementById("accountForm").style.display = "none";
+  }
+
+  // फॉर्म सेव करना
+  document.getElementById("userForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const userData = {
+      username: document.getElementById("username").value,
+      email: document.getElementById("email").value,
+      address: document.getElementById("address").value
+    };
+
+    // Local Storage में सेव करें
+    localStorage.setItem("userData", JSON.stringify(userData));
+
+    alert("Your details have been saved successfully!");
+    closeForm();
+  });
+</script>
+</body>
+</html>
+
