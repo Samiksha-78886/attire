@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "BLACK JACKET",
+        "price": "Rs.1049",
+        "image": "image/9.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "WHITE STRIPTED SHIRT",
+        "price": "Rs.699",
+        "image": "image/2.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "BLUEISH SHIRT",
+        "price": "Rs.599",
+        "image": "image/3.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "STRIPED T-SHIRT",
+        "price": "Rs.799",
+        "image": "image/4.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "TRENDING DARK SHIRT",
+        "price": "Rs.799",
+        "image": "image/5.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "FASHION CHECK BEIGE SHIRT",
+        "price":"Rs.599",
+        "image": "image/6.jpeg"
+    },
+    {
+        "id": 7,
+        "name": "GREY LOOSE SMART PANTS",
+        "price": "Rs.999",
+        "image": "image/7.jpeg"
+    },
+    {
+        "id": 8,
+        "name": "CARGO LO0SE PANTS",
+        "price": "Rs.699",
+        "image": "image/8.jpeg"
+    },
+    {
+        "id": 9,
+        "name": "WHITE AESTHETIC SWEATER",
+        "price": "Rs.999",
+        "image": "image/10.jpeg"
+    },
+    {
+        "id": 10,
+        "name": "OFF WHITE FASHION",
+        "price": "Rs.799",
+        "image": "image/11.jpeg"
+    },
+    {
+        "id": 11,
+        "name": "DARK BLUE SWEATER",
+        "price": "Rs.899",
+        "image": "image/12.jpeg"
+    }
+]
